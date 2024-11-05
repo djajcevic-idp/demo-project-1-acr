@@ -1,0 +1,15 @@
+#$schema: https://json.schemastore.org/catalog-info.json
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-project-1-acr
+  annotations:
+    argocd/app-name: demo-project-1
+  tags:
+    - helm
+spec:
+  type: config-repo
+  lifecycle: development
+  owner: demo-team
+  dependsOn:
+    - component:default/demo-project-1
